@@ -1,0 +1,52 @@
+# LAB | Different Ways to Chunk Podcast and PDF
+
+**Ironhack AI Consulting Bootcamp – Week 2 Mandatory Deliverable**
+
+## Overview
+This lab explores multiple chunking strategies for building effective RAG systems,
+applied to two different content types: a podcast transcript (audio → text) and a PDF document.
+Both sources cover the topic of Trustworthy AI.
+
+## Repository Structure
+.
+├── chunking_strategies.ipynb   # Main notebook with all implementations
+├── lab_summary.md              # Final recommendations (PDF vs. Podcast)
+├── data/                       # Source files (not tracked in git for large files)
+│   ├── transcript.txt          # Whisper-generated podcast transcript
+│   └── trustworthy_ai.pdf      # PDF source document
+├── .gitignore
+└── README.md
+
+## How to Run
+
+### Prerequisites
+- Python 3.10+ via conda
+- Jupyter Notebook / VS Code with Jupyter extension
+
+### Setup
+
+```bash
+# Create and activate conda environment
+conda create -n chunking-lab python=3.10
+conda activate chunking-lab
+
+# Install dependencies
+pip install langchain langchain-community pypdf2 python-dotenv openai tiktoken
+pip install openai-whisper sentence-transformers matplotlib
+```
+
+### Environment Variables
+Create a `.env` file (not committed) with:
+OPENAI_API_KEY=your_key_here
+
+### Run
+Open `chunking_strategies.ipynb` in VS Code or Jupyter and run cells sequentially.
+
+## Chunking Strategies Covered
+1. Fixed-Size Chunking (`CharacterTextSplitter`)
+2. Recursive Character Chunking (`RecursiveCharacterTextSplitter`)
+3. Token-Based Chunking (`TokenTextSplitter`)
+4. Semantic Chunking (optional/advanced, via `sentence-transformers`)
+
+## Key Findings
+→ See `lab_summary.md` for final recommendations.

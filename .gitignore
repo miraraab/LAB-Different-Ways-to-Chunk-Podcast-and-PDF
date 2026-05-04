@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+.env
+*.env
+env/
+venv/
+.conda/
+*.mp3
+*.wav
+*.m4a
+*.mp4
+.DS_Store
+.vscode/
